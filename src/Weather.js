@@ -3,8 +3,8 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div className="Weather border">
-      <form>
+    <div className="Weather p-4">
+      <form className="mb-2">
         <div className="row">
           <div className="col-9">
             <input
@@ -25,8 +25,12 @@ export default function Weather() {
       </ul>
       <div className="row">
         <div className="col-6">
-          <img src="/" />
-          7°C
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+            alt="party cloudy"
+          />
+          <span className="temperature"> 7</span>
+          <span className="units">°C</span>
         </div>
         <div className="col-6">
           <ul>
