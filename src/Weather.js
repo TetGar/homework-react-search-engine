@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ run: false });
 
   function showTemperature(response) {
@@ -28,6 +28,7 @@ export default function Weather() {
                 type="search"
                 placeholder="Enter a city..."
                 className="form-control"
+                autoFocus="on"
               />
             </div>
             <div className="col-3">
@@ -35,7 +36,7 @@ export default function Weather() {
             </div>
           </div>
         </form>
-        <h1>London</h1>
+        <h1>{props.cityChange}</h1>
         <ul>
           <li>{weatherInfo.date}</li>
           <li className="text-capitalize">{weatherInfo.description}</li>
