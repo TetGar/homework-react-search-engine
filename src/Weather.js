@@ -1,7 +1,17 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+  function showTemperature(response) {
+    console.log(response.data);
+  }
+
+  const apiKey = "50c2acd53349fabd54f52b93c8650d37";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showTemperature);
+
   return (
     <div className="Weather p-4">
       <form className="mb-2">
