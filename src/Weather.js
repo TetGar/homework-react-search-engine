@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import CorrectDay from "./CorrectDay";
 
 export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ run: false });
@@ -13,8 +14,8 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
-      icon: "",
-      date: "Wednesday 20:00",
+
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -36,9 +37,11 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h1>{props.cityChange}</h1>
+        <h1>{weatherInfo.city}</h1>
         <ul>
-          <li>{weatherInfo.date}</li>
+          <li>
+            <CorrectDay date={weatherInfo.date} />
+          </li>
           <li className="text-capitalize">{weatherInfo.description}</li>
         </ul>
         <div className="row">
