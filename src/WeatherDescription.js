@@ -1,5 +1,6 @@
 import React from "react";
 import CorrectDay from "./CorrectDay";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherDescription(props) {
   return (
@@ -12,11 +13,9 @@ export default function WeatherDescription(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-            alt="party cloudy"
-          />
+        <div className="col-6 mt-3">
+          <WeatherIcon code={props.data.icon} />
+
           <span className="temperature"> {props.data.temperature}</span>
           <span className="units">°C</span>
         </div>
