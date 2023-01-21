@@ -9,13 +9,14 @@ export default function App() {
         <Weather cityChange="New York" />
         <footer className="mt-3">
           This is project was coded by{" "}
-          <a href="/" target="_blank">
+          <a href="/" target="_blank" rel="noreferrer">
             Tetiana Garastej
           </a>{" "}
           and is{" "}
           <a
             href="https://github.com/TetGar/homework-react-search-engine"
             target="_blank"
+            rel="noreferrer"
           >
             open-sourced on GitHub
           </a>
