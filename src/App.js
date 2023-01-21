@@ -13,7 +13,10 @@ export default function App() {
             Tetiana Garastej
           </a>{" "}
           and is{" "}
-          <a href="/" target="_blank">
+          <a
+            href="https://github.com/TetGar/homework-react-search-engine"
+            target="_blank"
+          >
             open-sourced on GitHub
           </a>
         </footer>
