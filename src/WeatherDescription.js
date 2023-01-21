@@ -1,6 +1,7 @@
 import React from "react";
 import CorrectDay from "./CorrectDay";
 import WeatherIcon from "./WeatherIcon";
+import ConvertTemperature from "./ConvertTemperature";
 
 export default function WeatherDescription(props) {
   return (
@@ -13,11 +14,16 @@ export default function WeatherDescription(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6 mt-3">
-          <WeatherIcon code={props.data.icon} />
-
-          <span className="temperature"> {props.data.temperature}</span>
-          <span className="units">°C</span>
+        <div className="col-6">
+          <div className="d-flex">
+            <div className="WeatherIcon">
+              <WeatherIcon code={props.data.icon} />
+            </div>
+            <div>
+              {" "}
+              <ConvertTemperature celsius={props.data.temperature} />
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <ul>

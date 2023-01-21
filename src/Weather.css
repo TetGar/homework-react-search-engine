@@ -16,6 +16,11 @@
   opacity: 0.8;
   font-size: 16px;
 }
+.WeatherIcon {
+  position: relative;
+  top: 28px;
+  margin-right: 15px;
+}
 .temperature {
   font-size: 55px;
   position: relative;
