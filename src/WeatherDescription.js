@@ -17,7 +17,7 @@ export default function WeatherDescription(props) {
         <div className="col-6">
           <div className="d-flex">
             <div className="WeatherIcon">
-              <WeatherIcon code={props.data.icon} />
+              <WeatherIcon code={props.data.icon} size={55} />
             </div>
             <div>
               {" "}
