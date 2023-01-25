@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./Forecast.css";
 import axios from "axios";
@@ -7,6 +7,10 @@ import DailyForecast from "./DailyForecast";
 export default function Forecast(props) {
   const [run, setRun] = useState(false);
   const [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setRun(false);
+  }, [props.coords]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -26,6 +30,8 @@ export default function Forecast(props) {
                   <DailyForecast data={forecast[index]} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>

@@ -8,7 +8,7 @@ export default function WeatherDescription(props) {
     <div className="WeatherDescription">
       <h1>{props.data.city}</h1>
       <ul>
-        <li>
+        <li className="mt-2">
           <CorrectDay date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
