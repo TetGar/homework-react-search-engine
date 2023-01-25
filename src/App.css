@@ -1,3 +1,4 @@
-body {
-  max-width: 800px;
+.App {
+  max-width: 700px;
+  margin: 60px auto;
 }
