@@ -23,7 +23,7 @@ export default function Forecast(props) {
           {forecast.map(function (dailyTemperature, index) {
             if (index < 5) {
               return (
-                <div className="col">
+                <div className="col" key={index}>
                   {" "}
                   <DailyForecast data={forecast[index]} />
                 </div>

@@ -4,7 +4,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App m-4">
+    <div className="App p-4">
       <div className="container ">
         <Weather cityChange="New York" />
         <footer className="mt-3">
